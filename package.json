@@ -1,0 +1,90 @@
+{
+  "name": "tsed-graphql-example",
+  "version": "1.0.0",
+  "description": "example graphql usage with TS ED http://tsed.io/",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run tsc",
+    "debug": "node $NODE_DEBUG_OPTION --require ts-node/register src/index.ts",
+    "coverage": "npm run test-cov && npm run test-remap",
+    "postinstall": "npm run build",
+    "tslint": "tslint ./*.ts ./lib/*.ts",
+    "test": "jest --no-cache",
+    "tsc": "tsc --project tsconfig.json",
+    "tsc:w": "tsc -w",
+    "start": "npm run build && nodemon --watch '**/*.ts' --ignore 'node_modules/**/*' --exec ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bsparks/tsed-graphql-example.git"
+  },
+  "keywords": [
+    "graphql",
+    "typescript",
+    "tsed"
+  ],
+  "author": "Ben Sparks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bsparks/tsed-graphql-example/issues"
+  },
+  "homepage": "https://github.com/bsparks/tsed-graphql-example#readme",
+  "dependencies": {
+    "@tsed/common": "^5.25.1",
+    "@tsed/core": "^5.25.1",
+    "@tsed/di": "^5.25.1",
+    "@tsed/graphql": "^5.25.1",
+    "@tsed/testing": "^5.25.1",
+    "apollo-datasource": "^0.6.1",
+    "apollo-datasource-rest": "^0.6.1",
+    "apollo-server-express": "^2.8.1",
+    "cls-hooked": "^4.2.2",
+    "cls-rtracer": "^1.2.0",
+    "config": "^3.2.2",
+    "dataloader": "^1.4.0",
+    "express": "^4.17.1",
+    "graphql": "^14.4.2",
+    "nodemon": "^1.19.1",
+    "ts-httpexceptions": "^4.1.0",
+    "ts-log-debug": "^5.1.0",
+    "ts-node": "^8.3.0",
+    "type-graphql": "^0.17.4",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/config": "0.0.34",
+    "@types/express": "^4.17.0",
+    "@types/graphql": "^14.2.3",
+    "@types/jest": "^24.0.17",
+    "jest": "^24.8.0",
+    "jest-cli": "^24.8.0",
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "testRegex": ".*\\.spec\\.ts$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {
+      "^src/(.*)": "<rootDir>/src/$1"
+    },
+    "collectCoverage": true,
+    "coverageReporters": [
+      "text",
+      "text-summary",
+      "html",
+      "lcov"
+    ],
+    "verbose": true
+  }
+}
