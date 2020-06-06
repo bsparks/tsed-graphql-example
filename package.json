@@ -37,7 +37,7 @@
     "@tsed/testing": "^5.25.1",
     "apollo-datasource": "^0.6.1",
     "apollo-datasource-rest": "^0.6.1",
-    "apollo-server-express": "^2.8.1",
+    "apollo-server-express": "^2.14.2",
     "cls-hooked": "^4.2.2",
     "cls-rtracer": "^1.2.0",
     "config": "^3.2.2",
