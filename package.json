@@ -31,7 +31,7 @@
   "homepage": "https://github.com/bsparks/tsed-graphql-example#readme",
   "dependencies": {
     "@tsed/common": "^5.25.1",
-    "@tsed/core": "^5.25.1",
+    "@tsed/core": "^5.65.7",
     "@tsed/di": "^5.25.1",
     "@tsed/graphql": "^5.25.1",
     "@tsed/testing": "^5.25.1",
